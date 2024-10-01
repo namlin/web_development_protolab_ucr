@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------*/
-/*Josué Badilla Paredes - 2024*/
+/* Josué Badilla Paredes - 2024 */
 
 /*
 COLORS:
@@ -20,24 +20,26 @@ body {
 
 /*----------------------------------------------------------------------------*/
 section_container {
-  /*
   display: flex;
-
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;*/
-
-  display: flex;
-  flex-direction: column; /* Apila las secciones verticalmente */
-  height: 100%; /* O una altura específica */
-  overflow: auto; /* Maneja el desbordamiento */
+  flex-direction: column;
+  flex-flow: column wrap;
 }
 
 /*----------------------------------------------------------------------------*/
 /* Section Base Class */
 .section {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  gap: 20px;
   padding: 10px;
   margin-bottom: 24px;  /* Space between sections */
+}
+
+/*----------------------------------------------------------------------------*/
+#image_gallery {
+  display: flex;
+  flex-direction: row;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -89,6 +91,50 @@ a {
 foot {
   font-size: 16px;
   color: #FFFFFF;
+}
+
+/*----------------------------------------------------------------------------*/
+/* GAME */
+
+#game_1 {
+  width: 400px;
+  height: 300px;
+  border: solid red;
+}
+
+#playable_character {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  position: relative;
+  top: 150px;
+  right: 0px;
+}
+
+#block {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: relative;
+  top: 150px;
+  left: 380px;
+  animation: move_block 1s infinite linear;
+}
+
+.animate {
+  animation: jump 500ms;
+}
+
+@keyframes move_block {
+  0% { left: 380px; }
+  100% { left: -40px; }
+}
+
+@keyframes jump {
+  0% { top: 150px; }
+  30% { top:100px; }
+  70% { top:100px; }
+  100% { top: 150px; }
 }
 
 /*----------------------------------------------------------------------------*/
