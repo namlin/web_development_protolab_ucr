@@ -1,7 +1,8 @@
 // Josué Badilla Paredes 2024
 
-let playableCharacter = document.getElementById("playable_character");
-let block = document.getElementById("block");
+// ...
+const playableCharacter = document.getElementById("playable_character");
+const block = document.getElementById("block");
 
 function jump() {
   if (playableCharacter.classList != "animate") {
